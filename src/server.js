@@ -1,24 +1,20 @@
 import express from "express";
 import ConnectDB from './config/connectDB';
-import ContactModel from './models/contact.model';
+import configViewEngine from "./config/viewEngine";
 
 let app = express();
 //connect to MongoDB
 ConnectDB();
 
+// Config view engine
+configViewEngine(app);
 
-app.get("/test-database" ,async (req,res) => {
-  try {
-    let item = {
-      userId : "17074545",
-      contactId: "124512451",
-    };
-    let contact = await ContactModel.createNew(item);
-    res.send(contact);
+app.get("/" ,(req,res) => {
+  return res.render("main/master")
+});
 
-  } catch (err) {
-    console.log(err);
-  }
+app.get("/login-register" ,(req,res) => {
+  return res.render("auth/loginRegister")
 });
 
 app.listen(process.env.APP_PORT, process.env.APP_HOST, ()=>{

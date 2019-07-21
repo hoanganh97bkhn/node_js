@@ -62,3 +62,6 @@ typings/
 
 # env example
 sh/env.sh
+
+# bower
+src/public/bower_components
