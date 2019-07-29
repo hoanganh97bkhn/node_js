@@ -4,7 +4,7 @@ import bluebird from 'bluebird';
 /**
  * Connect to MongoDB
  */
-
+2
   let connectDB = () => {
    mongoose.Promise = bluebird;
 
