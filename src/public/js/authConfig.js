@@ -19,7 +19,6 @@ function showRegisterForm() {
       $('.register-footer').fadeOut('fast', function() {
         $('.login-footer').fadeIn('fast');
       });
-  
       $('.modal-title').html('Đăng nhập');
     });
     $('.error').removeClass('alert alert-danger').html('');

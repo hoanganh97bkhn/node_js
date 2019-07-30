@@ -1,8 +1,8 @@
 <% if(errors != "") { %>
-    <% errors.forEach((item) => { %>
-        <script>openRegisterModal()</script>
-        <div class="alert alert-danger"><%- item %></div>
+    <% errors.forEach((item, index) => { %>
+        <div class="alert alert-danger"><%- item%></div>
     <% }); %>
+    <script>openRegisterModal()</script>
 <% } %>
 
 <% if(success != "") { %>
@@ -11,4 +11,3 @@
         <div class="alert alert-success"><%- item %></div>
     <% }); %>
 <% } %>
-

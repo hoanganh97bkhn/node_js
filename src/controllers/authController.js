@@ -22,7 +22,7 @@ let postRegister = async(req, res) => {
     return res.redirect("/login-register");
   }
   try{
-    let createUserSuccess = await auth.register(req.body.email, req.body.gender, req.body.password, req.protocol, req.get("host"));
+    let createUserSuccess = await auth.register(req.body.name, req.body.email, req.body.gender, req.body.password, req.protocol, req.get("host"));
     successArr.push(createUserSuccess);
     req.flash("success", successArr);
     return res.redirect("/login-register");
