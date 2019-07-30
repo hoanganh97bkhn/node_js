@@ -320,7 +320,8 @@ hr {
 }
 
 .login .box .form input[type="text"],
-.login .box .form input[type="password"] {
+.login .box .form input[type="password"],
+.login .box .form input[type="email"]   {
   border-radius: 3px;
   border: none;
   color: #333333;
@@ -330,6 +331,7 @@ hr {
   padding: 13px 12px;
   width: 100%;
 }
+
 
 @media (max-width:400px) {
   .login .modal-dialog {

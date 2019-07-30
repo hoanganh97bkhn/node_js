@@ -5,6 +5,7 @@ import ConnectDB from './config/connectDB';
 import configViewEngine from "./config/viewEngine";
 import initRoutes from "./routes/web";
 import configSession from "./config/session";
+import passPort from 'passport';
 
 //Init app
 let app = express();
@@ -22,6 +23,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Enable flash messages
 app.use(connectFlash())
+
+// Config passport js
+app.use(passPort.initialize())
+app.use(passPort.session());
 
 //init all routes
 initRoutes(app);
